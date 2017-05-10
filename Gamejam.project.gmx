@@ -13,6 +13,7 @@
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_wood_background</sprite>
     <sprite>sprites\spr_menu_background</sprite>
+    <sprite>sprites\spr_logo</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_menu</background>
@@ -33,6 +34,7 @@
       <object>objects\obj_menu_background</object>
     </objects>
     <object>objects\obj_background</object>
+    <object>objects\obj_logo</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_menu</room>

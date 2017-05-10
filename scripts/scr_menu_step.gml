@@ -19,6 +19,10 @@ with (instance_position( mouse_x, mouse_y, all))
 
 if (clicked_play && obj_menu_background.y >= -720)
 {
+    with (obj_logo)
+    {
+        y -= obj_btn_play.vertical_speed;
+    }
     with (obj_btn_play)
     {
         y -= vertical_speed;
@@ -33,6 +37,10 @@ if (clicked_play && obj_menu_background.y >= -720)
     }
 } else if (obj_menu_background.y <= -720)
 {
+    with (obj_logo)
+    {
+        instance_destroy();
+    }
     with (obj_btn_play)
     {
         instance_destroy();
