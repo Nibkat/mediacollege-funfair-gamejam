@@ -10,21 +10,29 @@
       <sprite>sprites\spr_btn_play</sprite>
       <sprite>sprites\spr_btn_exit</sprite>
     </sprites>
+    <sprite>sprites\spr_cursor</sprite>
+    <sprite>sprites\spr_wood_background</sprite>
+    <sprite>sprites\spr_menu_background</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_menu</background>
+    <background>background\bg_wood</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Menu">
-      <script>scripts\scr_menu.gml</script>
+      <script>scripts\scr_menu_step.gml</script>
+      <script>scripts\scr_menu_create.gml</script>
     </scripts>
+    <script>scripts\set_cursor.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Buttons">
       <object>objects\obj_btn_play</object>
       <object>objects\obj_btn_exit</object>
+      <object>objects\obj_menu_background</object>
     </objects>
+    <object>objects\obj_background</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_menu</room>
