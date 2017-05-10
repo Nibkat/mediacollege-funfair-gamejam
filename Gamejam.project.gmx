@@ -4,16 +4,27 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_bg_music</sound>
+  </sounds>
   <sprites name="sprites">
-    <sprites name="Buttons">
-      <sprite>sprites\spr_btn_play</sprite>
-      <sprite>sprites\spr_btn_exit</sprite>
+    <sprites name="Menu">
+      <sprite>sprites\spr_menu_background</sprite>
+      <sprite>sprites\spr_logo</sprite>
+      <sprites name="Buttons">
+        <sprite>sprites\spr_btn_play</sprite>
+        <sprite>sprites\spr_btn_exit</sprite>
+      </sprites>
+      <sprites name="End Screens">
+        <sprite>sprites\spr_win_screen</sprite>
+        <sprite>sprites\spr_lose_screen</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Targets">
+      <sprite>sprites\spr_zombie_dapper</sprite>
     </sprites>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_wood_background</sprite>
-    <sprite>sprites\spr_menu_background</sprite>
-    <sprite>sprites\spr_logo</sprite>
     <sprite>sprites\spr_stand_front</sprite>
   </sprites>
   <backgrounds name="background">
@@ -28,16 +39,21 @@
     </scripts>
     <script>scripts\scr_set_cursor.gml</script>
     <script>scripts\scr_set_depth.gml</script>
+    <script>scripts\scr_target.gml</script>
+    <script>scripts\scr_target_spawner.gml</script>
   </scripts>
   <objects name="objects">
-    <objects name="Buttons">
-      <object>objects\obj_btn_play</object>
-      <object>objects\obj_btn_exit</object>
-      <object>objects\obj_menu_background</object>
+    <objects name="Menu">
+      <objects name="Buttons">
+        <object>objects\obj_btn_play</object>
+        <object>objects\obj_btn_exit</object>
+        <object>objects\obj_menu_background</object>
+      </objects>
+      <object>objects\obj_logo</object>
     </objects>
     <object>objects\obj_background</object>
-    <object>objects\obj_logo</object>
     <object>objects\obj_stand_front</object>
+    <object>objects\obj_target</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_main</room>
