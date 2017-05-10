@@ -14,6 +14,7 @@
     <sprite>sprites\spr_wood_background</sprite>
     <sprite>sprites\spr_menu_background</sprite>
     <sprite>sprites\spr_logo</sprite>
+    <sprite>sprites\spr_stand_front</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_menu</background>
@@ -25,7 +26,8 @@
       <script>scripts\scr_menu_step.gml</script>
       <script>scripts\scr_menu_create.gml</script>
     </scripts>
-    <script>scripts\set_cursor.gml</script>
+    <script>scripts\scr_set_cursor.gml</script>
+    <script>scripts\scr_set_depth.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Buttons">
@@ -35,9 +37,9 @@
     </objects>
     <object>objects\obj_background</object>
     <object>objects\obj_logo</object>
+    <object>objects\obj_stand_front</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_menu</room>
     <room>rooms\room_main</room>
   </rooms>
   <help>
