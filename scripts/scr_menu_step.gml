@@ -40,38 +40,16 @@ with (instance_position( mouse_x, mouse_y, all))
 
 if (clicked_play && obj_menu_background.y >= -720)
 {
-    with (obj_logo)
+    for (i = 0; i < array_length_1d(obj_btn_play.objects); i++)
     {
-        y -= obj_btn_play.vertical_speed;
-    }
-    with (obj_btn_play)
-    {
-        y -= vertical_speed;
-    }
-    with (obj_btn_exit)
-    {
-        y -= obj_btn_play.vertical_speed;
-    }
-    with (obj_menu_background)
-    {
-        y -= obj_btn_play.vertical_speed;
+        with (objects[i])
+            y -= obj_btn_play.vertical_speed;
     }
 } else if (obj_menu_background.y <= -720)
 {
-    with (obj_logo)
+    for (i = 0; i < array_length_1d(obj_btn_play.objects); i++)
     {
-        instance_destroy();
-    }
-    with (obj_btn_play)
-    {
-        instance_destroy();
-    }
-    with (obj_btn_exit)
-    {
-        instance_destroy();
-    }
-    with (obj_menu_background)
-    {
-        instance_destroy();
+        with (objects[i])
+            instance_destroy();
     }
 }
