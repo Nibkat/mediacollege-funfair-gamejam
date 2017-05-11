@@ -6,6 +6,11 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_bg_music</sound>
+    <sound>sound\snd_zombie_spawn</sound>
+    <sound>sound\snd_shoot</sound>
+    <sound>sound\snd_zombie_death</sound>
+    <sound>sound\snd_death_male</sound>
+    <sound>sound\snd_death_female</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Menu">
@@ -22,10 +27,29 @@
     </sprites>
     <sprites name="Targets">
       <sprite>sprites\spr_zombie_dapper</sprite>
+      <sprite>sprites\spr_zombie_boi</sprite>
+      <sprite>sprites\spr_zombie_gal</sprite>
+      <sprite>sprites\spr_zombie_smoll_boi</sprite>
+      <sprite>sprites\spr_zombie_princess</sprite>
+      <sprite>sprites\spr_human_boy</sprite>
+      <sprite>sprites\spr_human_granny</sprite>
+      <sprite>sprites\spr_human_girlo</sprite>
+    </sprites>
+    <sprites name="Front">
+      <sprite>sprites\spr_front_side</sprite>
+      <sprite>sprites\spr_front_top</sprite>
+      <sprite>sprites\spr_front_bottom</sprite>
+    </sprites>
+    <sprites name="Rows">
+      <sprite>sprites\spr_row_1</sprite>
+      <sprite>sprites\spr_row_2</sprite>
+      <sprite>sprites\spr_row_3</sprite>
     </sprites>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_wood_background</sprite>
     <sprite>sprites\spr_stand_front</sprite>
+    <sprite>sprites\spr_gear</sprite>
+    <sprite>sprites\spr_bears</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_menu</background>
@@ -33,27 +57,60 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="Score">
+      <script>scripts\scr_score_draw.gml</script>
+      <script>scripts\scr_score_create.gml</script>
+    </scripts>
     <scripts name="Menu">
-      <script>scripts\scr_menu_step.gml</script>
       <script>scripts\scr_menu_create.gml</script>
+      <script>scripts\scr_menu_step.gml</script>
+    </scripts>
+    <scripts name="Target">
+      <script>scripts\scr_target_create.gml</script>
+      <script>scripts\scr_target_step.gml</script>
+    </scripts>
+    <scripts name="TargetSpawner">
+      <script>scripts\scr_target_spawner_create.gml</script>
+      <script>scripts\scr_target_spawner_step.gml</script>
+      <script>scripts\scr_target_spawner_draw.gml</script>
     </scripts>
     <script>scripts\scr_set_cursor.gml</script>
     <script>scripts\scr_set_depth.gml</script>
-    <script>scripts\scr_target.gml</script>
-    <script>scripts\scr_target_spawner.gml</script>
+    <script>scripts\scr_sound_on_click.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_large</font>
+  </fonts>
   <objects name="objects">
     <objects name="Menu">
       <objects name="Buttons">
         <object>objects\obj_btn_play</object>
         <object>objects\obj_btn_exit</object>
-        <object>objects\obj_menu_background</object>
       </objects>
       <object>objects\obj_logo</object>
+      <object>objects\obj_menu_background</object>
+    </objects>
+    <objects name="Front">
+      <object>objects\obj_front_side</object>
+      <object>objects\obj_front_bottom</object>
+      <object>objects\obj_front_top</object>
+      <object>objects\obj_bears</object>
+    </objects>
+    <objects name="Managers">
+      <object>objects\obj_score</object>
+      <object>objects\obj_spawner</object>
+      <object>objects\obj_menu</object>
+      <object>objects\obj_gun_sound</object>
     </objects>
     <object>objects\obj_background</object>
     <object>objects\obj_stand_front</object>
     <object>objects\obj_target</object>
+    <object>objects\obj_test</object>
+    <objects name="Rows">
+      <object>objects\obj_row_1</object>
+      <object>objects\obj_row_2</object>
+      <object>objects\obj_row_3</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_main</room>
